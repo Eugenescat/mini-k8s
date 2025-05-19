@@ -1,0 +1,7 @@
+kind: service
+name: example-service
+selector:
+  app: example-pod
+ports:
+  - port: 80
+    targetPort: 80

@@ -1,0 +1,9 @@
+kind: pod
+name: example-pod
+image: nginx:latest
+command: ["nginx", "-g", "daemon off;"]
+cpu: "1"
+memory: "128MB"
+volume: "/Users/yan/Course/2025/mini-k8s/data"
+ports:
+  - 80
