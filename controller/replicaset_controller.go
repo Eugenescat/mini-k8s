@@ -3,6 +3,7 @@ package controller
 import (
 	"fmt"
 	"mini-k8s/api"
+	"time"
 )
 
 type ReplicaSetController struct {
@@ -64,5 +65,21 @@ func (rc *ReplicaSetController) SyncReplicaSets() {
 				}
 			}
 		}
+	}
+}
+
+func (rc *ReplicaSetController) GetReplicaSet(name string) (*api.ReplicaSetSpec, error) {
+	spec, ok := rc.replicasets[name]
+	if !ok {
+		return nil, nil
+	}
+	return &spec, nil
+}
+
+// SyncLoop 启动 ReplicaSet 控制器的同步循环
+func (rc *ReplicaSetController) SyncLoop() {
+	ticker := time.NewTicker(10 * time.Second)
+	for range ticker.C {
+		rc.SyncReplicaSets()
 	}
 }

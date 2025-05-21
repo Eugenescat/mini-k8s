@@ -1,0 +1,14 @@
+kind: ReplicaSet
+name: nginx-rs
+replicas: 2 # 初始副本数
+selector:
+  app: nginx
+template:
+  kind: pod
+  name: nginx # 实际创建时会自动加上 -0, -1 等后缀
+  image: nginx:latest
+  command: ["nginx", "-g", "daemon off;"]
+  cpu: "0.5" # 限制每个 Pod 使用 0.5 核 CPU
+  memory: "128MB"
+  ports:
+    - 80 # 暴露 HTTP 端口
