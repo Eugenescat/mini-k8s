@@ -1,0 +1,13 @@
+kind: dns
+name: example-dns
+host: example.cluster.local
+paths:
+  - path: /api
+    service: api-service
+    port: 8080
+  - path: /web
+    service: web-service
+    port: 80
+  - path: /metrics
+    service: metrics-service
+    port: 9090
