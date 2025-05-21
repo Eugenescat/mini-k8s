@@ -1,0 +1,8 @@
+kind: HorizontalPodAutoscaler
+name: nginx-hpa
+target: nginx-rs
+minReplicas: 1
+maxReplicas: 5
+metrics:
+  - type: cpu
+    target: 50.0 # 目标 CPU 使用率 50%
