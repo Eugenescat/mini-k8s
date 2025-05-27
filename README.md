@@ -8,7 +8,7 @@ Minik8s 是一个迷你版的容器编排工具，支持多机、多容器生命
 
 ## 基本功能要求
 
-### 1. Pod 抽象与生命周期管理
+### 1. Pod 抽象与生命周期管理✅
 - 支持通过 YAML 文件配置和启动 Pod。
 - 支持 Pod 的自动启动、终止、状态查询（get pod, describe pod）。
 - 支持多容器互访（localhost）。
@@ -21,7 +21,7 @@ Minik8s 是一个迷你版的容器编排工具，支持多机、多容器生命
   - volume: 共享卷
   - port: 容器端口暴露
 
-### 2. Service 抽象
+### 2. Service 抽象✅
 - 支持 Service 发现与负载均衡，暴露端口，支持 selector 选择 Pod。
 - 支持通过 YAML 配置 Service，内容包括：
   - kind: service
@@ -29,19 +29,19 @@ Minik8s 是一个迷你版的容器编排工具，支持多机、多容器生命
   - selector: 匹配 pod
   - ports: 暴露端口（port/targetPort）
 
-### 3. ReplicaSet/Deployment
+### 3. ReplicaSet/Deployment✅
 - 支持为 Service 配置多个副本（replica），自动监控和恢复 Pod。
 - 支持通过 YAML 配置 ReplicaSet/Deployment。
 
-### 4. 自动扩缩容（Auto-scaling）
+### 4. 自动扩缩容（Auto-scaling）✅
 - 支持基于 Service 下 Pod 资源使用情况自动扩缩容。
 - 支持 CPU、内存、带宽等多种资源类型监控。
 - 支持通过 YAML 配置 HPA（HorizontalPodAutoscaler）。
 
-### 5. DNS 绑定
+### 5. DNS 绑定✅
 - 支持通过 YAML 配置 Service 的域名和路径，实现集群内服务的 DNS 访问。
 
-### 6. 容错
+### 6. 容错🤔(Working on)
 - 控制面 crash 不影响已运行 Pod。
 - 控制面重启后，Service 可重新访问。
 
