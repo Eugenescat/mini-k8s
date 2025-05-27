@@ -1,12 +1,12 @@
 # Minik8s Lab
 
-## 项目简介
+## Project Overview
 
 Minik8s 是一个迷你版的容器编排工具，支持多机、多容器生命周期管理、自动扩缩容、服务发现、负载均衡等核心功能。项目基于 Fminik8s 实现，支持自定义调度、微服务、Serverless 平台集成等扩展功能，旨在帮助同学深入理解云原生与容器编排系统的原理与实现。
 
 ---
 
-## 基本功能要求
+## 基本功能 Basic Functionalities
 
 ### 1. Pod abstraction and lifecycle management✅
 - 支持通过 YAML 文件配置和启动 Pod。
@@ -55,7 +55,7 @@ Minik8s 是一个迷你版的容器编排工具，支持多机、多容器生命
 
 ---
 
-## 进阶/自选功能
+## 进阶/自选功能 Advanced/Optional Features
 
 ### Microservice
 - 支持 Service Mesh（如 Istio）流量管控。
