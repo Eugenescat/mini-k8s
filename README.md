@@ -6,7 +6,7 @@ Minik8s 是一个迷你版的容器编排工具，支持多机、多容器生命
 
 ---
 
-## 基本功能 Basic Functionalities
+## 基本功能 Basic Features
 
 ### 1. Pod abstraction and lifecycle management✅
 - 支持通过 YAML 文件配置和启动 Pod。
